@@ -3,12 +3,12 @@ const turnoff = document.getElementById('turnoff');
 const lamp = document.getElementById('lamp');
 
 //Verifica se esta quebrada
-function lampqb (){
-    return lamp.src.indexOf ('lampqb') > -1;
+function lampbroken (){
+    return lamp.src.indexOf ('quebrada') > -1;
 }
 // Função Ligar lampada
 function lampon () {
-    if (!lampqb ()){
+    if (!lampbroken ()){
     lamp.src = 'ligada.jpg';
     }
 }
@@ -17,7 +17,7 @@ turnon.addEventListener('click', lampon);
 
 //Função desligar lampada
 function lampoff () {
-    if (!lampqb ()){
+    if (!lampbroken ()){
     lamp.src = 'desligada.jpg';
     }
 }
