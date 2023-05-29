@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+
+        body {
+
+            font: normal 15pt Arial;
+            
+        }
+        body, h1{
+            text-align: center;
+        }
+        .calc{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 400px;
+            height: 400px;
+            background-color: grey;
+        }
+
+        input {
+            font: normal 15pt Arial;
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        #button:hover{
+            background-color: rgb(93, 167, 93);
+            color: white;
+        }
+        footer{
+            margin-top: 123px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <section class="calc">
+    <h1>Soma</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input id="button" type="button" value="somar" onclick="somar ()">
+    <div id="res">Resultado</div>
+
+    <h1>Subtração</h1>
+
+    <input type="number" name="txtn11" id="txtn11"> -
+    <input type="number" name="txtn22" id="txtn22">
+    <input id="button" type="button" value="sub" onclick="sub ()">
+    <div id="ress">Resultado</div>
+</section>
+
+<footer>Desenvolvido por <strong>Jorge Oliveira</strong> &COPY;</footer>
+    <script>
+        function somar() {
+            var tn1 = window.document.querySelector('input#txtn1');
+            var tn2 = window.document.querySelector('input#txtn2');
+            var res = window.document.getElementById('res');
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 + n2;
+
+            res.innerHTML = `A soma de ${n1} + ${n2} é: <strong>${s}</strong>`
+
+           
+        }
+        function sub() {
+            var tn1 = window.document.querySelector('input#txtn11');
+            var tn2 = window.document.querySelector('input#txtn22');
+            var ress = window.document.getElementById('ress');
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var sub = n1 - n2;
+
+            ress.innerHTML = `A subtração de ${n1} - ${n2} é: <strong>${sub}</strong>`
+
+        }
+    </script>
+</body>
+
+</html>
